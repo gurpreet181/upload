@@ -42,6 +42,9 @@ const reader = new FileReader();
     uploaded_image = reader.result;
     document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
     
+  var blob = new Blob(["test text"], {type: "text/plain;charset=utf-8"});
+  saveAs(blob, "testfile1.txt");
+
   });
   reader.readAsDataURL(fil.files[0]);
 									} else {
